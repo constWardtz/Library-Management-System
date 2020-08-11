@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Mangement System</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+</head>
+<body>
+    
+    
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            </div>
+        </nav>
+
+        <!-- Display error message when the value is less than 2 -->
+        <div id="error-message"></div>
+      <!-- Container -->
+      <div class="container">
+          <!-- Header -->
+          <div class="text-center pt-5">
+             <h1 class="">Library Management System</h1>
+             <p class="form-control-lg">Books are a uniquely portable magic.</p>
+        </div>
+        <!-- Inputs -->
+        <form id="library-form">
+            <div class="form-group">
+              <label for="bookName">Book Name:</label>
+              <input type="text" class="form-control" id="book-name" placeholder="Book Name...">
+            </div>
+            <div class="form-group">
+              <label for="bookAuthor">Book Author:</label>
+              <input type="text" class="form-control" id="book-author" placeholder="Book Author...">
+            </div>
+            <!-- Costum Select -->
+            <div class="input-group mt-4 mb-4">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Book Genre / Type:</label>
+                </div>
+                <select class="custom-select" id="book-type">
+                  <option value="Programming" id="select-programming" selected>Programming</option>
+                  <option value="Detective and Mystery" id="select-mystery">Detective and Mystery</option>
+                  <option value="Action and Adventure" id="select-action">Action and Adventure</option>
+                  <option value="Historical Fiction" id="select-historical">Historical Fiction</option>
+                </select>
+              </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Book</button>
+          </form>
+        <!-- Table -->
+        <h1 class="text-center mt-5">My Books</h1>
+        <table class="table mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Type</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+      </div>
+
+      <!-- Script -->
+      <script defer src="./js/index.js"></script>
+</body>
+</html>
